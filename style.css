@@ -1,42 +1,56 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
-body {
+
+.animated-text {
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+.animated-text:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.animated-text:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.dot-loader {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background: linear-gradient(to right, #141e30, #243b55);
-    color: white;
-    font-family: Arial, sans-serif;
-    text-align: center;
-}
-.container {
-    animation: fadeIn 2s ease-in-out;
-}
-h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-p {
-    font-size: 1.2rem;
-}
-.loader {
     margin-top: 20px;
-    border: 5px solid rgba(255, 255, 255, 0.3);
-    border-top: 5px solid #ffffff;
+}
+
+.dot-loader span {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: white;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: spin 1s linear infinite;
+    animation: bounce 1.4s infinite ease-in-out both;
 }
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+
+.dot-loader span:nth-child(1) {
+    animation-delay: -0.32s;
 }
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+
+.dot-loader span:nth-child(2) {
+    animation-delay: -0.16s;
+}
+
+@keyframes bounce {
+    0%, 80%, 100% {
+        transform: scale(0);
+    }
+    40% {
+        transform: scale(1);
+    }
 }

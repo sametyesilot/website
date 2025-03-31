@@ -1,3 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    console.log("Sayfa yüklendi - Yapım Aşamasında");
+    document.querySelectorAll(".animated-text").forEach((el) => {
+        el.style.opacity = "1";
+    });
 });
