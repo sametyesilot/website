@@ -1,3 +1,3 @@
 document.addEventListener("DOMContentLoaded", function() {
-    console.log("Sayfa yüklendi - Yapım aşaması bildiriliyor.");
+    console.log("Sayfa yüklendi - Yapım Aşamasında");
 });
