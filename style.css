@@ -1,59 +1,35 @@
-* {
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #1a1a2e;
-    color: #fff;
-    font-family: Arial, sans-serif;
+    background: url('background.jpg') no-repeat center center/cover;
+    filter: blur(5px);
     text-align: center;
+    font-family: Arial, sans-serif;
 }
 
 .container {
-    animation: fadeIn 2s ease-in-out;
+    position: relative;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
 }
 
-h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+.construction-icon {
+    width: 100px;
+    animation: rotate 2s linear infinite;
 }
 
-p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-/* İlerleme çubuğu animasyonu */
-.progress-bar-wrapper {
-    width: 100%;
-    height: 10px;
-    background-color: #f3f3f3;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-
-.progress-bar {
-    width: 0;
-    height: 100%;
-    background-color: #e94560;
-    border-radius: 5px;
-    animation: loadingProgress 5s infinite;
-}
-
-/* Animasyonlar */
-@keyframes loadingProgress {
-    0% { width: 0; }
-    50% { width: 50%; }
-    100% { width: 100%; }
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
