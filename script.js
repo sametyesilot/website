@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    document.querySelectorAll(".animated-text").forEach((el) => {
-        el.style.opacity = "1";
+    document.querySelectorAll(".title, .subtitle").forEach((el, index) => {
+        el.style.animationDelay = `${index * 0.5}s`;
     });
 });
