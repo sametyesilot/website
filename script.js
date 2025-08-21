@@ -1,5 +1,2 @@
-document.addEventListener("DOMContentLoaded", function() {
-    document.querySelectorAll(".title, .subtitle").forEach((el, index) => {
-        el.style.animationDelay = `${index * 0.5}s`;
-    });
-});
+console.log("Samet Yeşilot portföy sitesine hoş geldiniz!");
+// İleride etkileşimli özellikler eklenebilir.
