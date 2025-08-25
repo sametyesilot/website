@@ -1,9 +1,0 @@
-{
-  "rewrites": [
-    { "source": "/privacy", "destination": "/privacy.php" },
-    { "source": "/assets/(.*)", "destination": "/assets/$1" },
-    { "source": "/vendor/(.*)", "destination": "/vendor/$1" },
-    { "source": "/(.*\\.php)", "destination": "/$1" },
-    { "source": "/(.*)", "destination": "/index.php" }
-  ]
-}
